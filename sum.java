@@ -10,4 +10,3 @@ for(int i =0; i<j.length;i++) {
 
 }
 }
-Out put :23
