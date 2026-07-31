@@ -1,0 +1,35 @@
+class Node{
+    int data;
+    Node left,right;
+    public Node(int data){
+        this.data=data;
+        this.left=null;
+        this.right=null;
+    }
+}
+public class Main{
+    static Node root;
+    public static void main(String[]args){
+        root=new Node(7);
+        Node left=new Node(5);
+        Node right=new Node(9);
+        root.left=left;
+        root.right=right;
+        Node leftx=new Node(7);
+        Node rightx=new Node(6);
+        Node lefty=new Node(8);
+        Node righty=new Node(10);
+        root.left.left=leftx;
+        root.left.right=rightx;
+        root.right.left=lefty;
+        root.right.right=righty;
+        inorder(root);
+    }
+    public static void inorder(Node root)
+    {
+        if(root==null)return;
+        inorder(root.left);
+        System.out.println(root.data+" ");
+        inorder(root.right);
+    }
+}
